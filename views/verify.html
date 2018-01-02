@@ -16,10 +16,10 @@
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
-          <button id="back" type="button" class="btn btn-back" data-target="home">
+          <button id="back" type="button" class="btn btn-back" data-target="signup">
             <span class="glyphicon glyphicon-chevron-left"></span>
           </button>
-          <a class="navbar-brand text-center" href="#">Sign Up</a>
+          <a class="navbar-brand text-center" href="#">Verify phone number</a>
           <p class="navbar-text text-center">Join now for free ride credit</p>
         </div>
     </nav>
@@ -29,24 +29,13 @@
     <section class="container">
       <div class="row">
         <div class="col-xs-12">
-          <div class="input-group">
-            <div class="input-group-btn">
-              <button id="selected-country" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <img src="../assets/images/flag-per.png" alt="Country flag"> <span class="caret"></span>
-              </button>
-              <ul id="countries" class="dropdown-menu">
-                <li><a href="#" id="per" data-prefix="51"><img src="../assets/images/flag-per.png" alt="Country flag"></a></li>
-                <li><a href="#" id="mex" data-prefix="52"><img src="../assets/images/flag-mex.png" alt="Country flag"></a></li>
-                <li><a href="#" id="ven" data-prefix="53"><img src="../assets/images/flag-ven.png" alt="Country flag"></a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#" id="eeuu" data-prefix="01"><img src="../assets/images/flag-eeuu.png" alt="Country flag"></a></li>
-              </ul>
-            </div>
+          <div class="form-group center-block">
+            <p class="form-control-static">LAB - </p>
             <input type="tel" class="form-control" id="phoneNumber" placeholder="Insert phone number" value="51">
           </div>
         </div>  
       </div>
-      <p class="text-center mt-20">We'll send a text to verify your phone</p>
+      <p class="text-center mt-20">Enter your 3 digit code</p>
       <div class="row relative">
         <div class="col-xs-8 col-xs-offset-2">
           <button id="finish-signup" type="button" class="btn btn-lyft text-uppercase center-block" data-target="verify" disabled>next</button>

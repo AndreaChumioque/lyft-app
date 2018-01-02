@@ -4,16 +4,24 @@
   --lyft-pink: #e80a8b;
 }
 
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
 img {
   width: 100%;
 }
 
-/* Overwrite styles */
 .btn-transparent {
   background-color: transparent;
+  color: #fff;
   border: 1px solid #fff;
-  padding: 10px 15px;
+  width: 100%;
+  min-width: 75px;
+  padding: 15px;
+  margin-bottom: 15px;
   height: auto;
+  transition: .25s;
 }
 
 .btn-transparent:hover {
@@ -21,17 +29,75 @@ img {
   color: var(--lyft-purple);
 }
 
-nav {
+.btn-lyft {
+  width: 100%;
+  background: linear-gradient(to bottom right, 
+  var(--lyft-purple), var(--lyft-pink));
+  color: #fff;
+  font-size: 1em;
+  margin-top: 150px;
+  border-radius: 0;
+  padding: 15px;
+  transition: .25s;
+}
+
+.btn-lyft:hover {
+  color: #fff;
+  background: linear-gradient(to bottom right, 
+  #3a0043, #c50073);
+}
+
+.btn-lyft:disabled {
+  background-color: #c6c6c6;
+}
+
+.btn-back {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background-color: transparent;
+  color: var(--lyft-purple);
+  transition: .25s;
+}
+
+.btn-back:hover {
+  color: #c600e4;
+}
+
+/* Overwrite styles */
+
+.navbar-default {
   background-color: #fff;
+  border: none;
+  border-bottom: 1px solid #e7e7e7;
 }
 
-nav .brand-logo {
-  color: #777;
-  font-size: 1.8em;
+.navbar-header {
+  position: relative;
 }
 
-nav ul a {
-  color: #777;
+.navbar-brand {
+  width: 100%;
+}
+
+.dropdown-menu {
+  min-width: auto;
+}
+
+.dropdown-menu img {
+  width: 25px;
+}
+
+.form-control {
+  border-radius: 0;
+}
+
+.form-control {
+  border: none;
+  border-bottom: 1px solid #e7e7e7;
+  box-shadow: none;
+  margin-left: 5px;
 }
 
 /* Helpers */
@@ -40,9 +106,14 @@ nav ul a {
   margin-bottom: 0;
 }
 
-.valign-bottom {
+.valign-center {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
+  justify-content: center;
+}
+
+.mt-20 {
+  margin-top: 20px;
 }
 
 /* Splash screen styles */
@@ -52,8 +123,8 @@ nav ul a {
 }
 
 .logo {
-  margin: 1em auto;
-  width: 50%;
+  margin: 0 auto;
+  width: 75%;
   max-width: 250px;
 }
 
@@ -63,8 +134,30 @@ nav ul a {
   background-position: 65% 50%;
   background-size: cover;
   padding-bottom: 20px;
+  position: relative;
 }
 
-#home .btn {
-  width: 75%;
+#home .row {
+  position: absolute;
+  width: 100%;
+  bottom: 25px;
+}
+
+#selected-country {
+  height: 34px;
+  padding: 1px 6px;
+}
+
+#selected-country img {
+  width: 25px;
+}
+
+@media(min-width: 768px) {
+  .navbar-header, .navbar-text {
+    float: none;
+  }
+  
+  .navbar>.container-fluid .navbar-brand {
+    margin-left: 0;
+  }
 }

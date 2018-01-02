@@ -5,24 +5,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="../vendors/materialize/css/materialize.min.css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="../vendors/bootstrap/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link rel="stylesheet" href="../css/main.css">
   <title>Lyft</title>
 </head>
 
 <body>
-  <section id="home" class="screen-100vh row valign-bottom">
-    <div class="col s6">
-      <a id="login" class="waves-effect waves-light btn btn-transparent right">log in</a>
-    </div>
-    <div class="col s6">
-      <a id="signup" class="waves-effect waves-light btn btn-transparent">sign up</a>
+  <section id="home" class="container-fluid screen-100vh">
+    <div class="row">
+      <div class="col-xs-5 col-xs-offset-1 col-md-8 col-md-offset-2">
+        <button id="login" class="btn btn-transparent pull-right text-uppercase" data-target="login">log in</button>
+      </div>
+      <div class="col-xs-5 col-md-8 col-md-offset-2">
+        <button id="signup" class="btn btn-transparent text-uppercase" data-target="signup">sign up</button>
+      </div>
     </div>
   </section>
 
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="../vendors/materialize/js/materialize.min.js"></script>
+  <script type="text/javascript" src="../vendors/bootstrap/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="../js/app.js"></script>
 </body>
 
