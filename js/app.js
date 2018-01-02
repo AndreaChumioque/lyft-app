@@ -1,12 +1,13 @@
 $(document).ready(function() {
   fadeSplash();
   $('#signup, #login, #finish-signup, #back').click(goTo);
-  $('#finish-signup').click(generateCode);
+  $('#finish-signup, #resend').click(generateCode);
   $('#countries a').click(changeFlag);
   $('#phoneNumber').keyup(validateSignup);
+  $('#verification').keyup(verifyCode);
 
   function fadeSplash() {
-    if (window.location.href === 'file:///D:/Andrea/Laboratoria/Sprint3/Retos%203/lyft-app/index.html') {
+    if (window.location.href === 'https://andrea-isabel.github.io/lyft-app/') {
       setTimeout(function() {
         $('body').fadeOut(1000, function() {
           window.location.href = 'views/home.html';
@@ -36,12 +37,16 @@ $(document).ready(function() {
   }
 
   function generateCode() {
-    var randomCode = Math.floor((Math.random() * 999) + 100);
+    var randomCode = Math.floor(Math.random() * (999 - 100 + 1) + 100);;
     localStorage.verificationCode = randomCode;
     alert('LAB - ' + randomCode);
   }
 
   function verifyCode() {
-
+    if ($(this).val() === localStorage.verificationCode && $(this).val().length === 3) {
+      $('#finish-verification').prop('disabled', false);
+    } else {
+      $('#finish-verification').prop('disabled', true);
+    }
   }
 });

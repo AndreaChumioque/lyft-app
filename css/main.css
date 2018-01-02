@@ -21,7 +21,6 @@ img {
   padding: 15px;
   margin-bottom: 15px;
   height: auto;
-  transition: .25s;
 }
 
 .btn-transparent:hover {
@@ -38,7 +37,6 @@ img {
   margin-top: 150px;
   border-radius: 0;
   padding: 15px;
-  transition: .25s;
 }
 
 .btn-lyft:hover {
@@ -58,7 +56,6 @@ img {
   border: none;
   background-color: transparent;
   color: var(--lyft-purple);
-  transition: .25s;
 }
 
 .btn-back:hover {
@@ -66,6 +63,9 @@ img {
 }
 
 /* Overwrite styles */
+.btn {
+  transition: .25s;
+}
 
 .navbar-default {
   background-color: #fff;
@@ -89,8 +89,8 @@ img {
   width: 25px;
 }
 
-.form-control {
-  border-radius: 0;
+.form-group {
+  text-align: center;
 }
 
 .form-control {
@@ -98,7 +98,17 @@ img {
   border-bottom: 1px solid #e7e7e7;
   box-shadow: none;
   margin-left: 5px;
+  border-radius: 0;
+  display: inline-block;
+  width: auto;
+  vertical-align: middle;
 }
+
+/* .form-inline .form-control {
+  display: inline-block;
+  width: auto;
+  vertical-align: middle;
+} */
 
 /* Helpers */
 .screen-100vh{
@@ -116,7 +126,7 @@ img {
   margin-top: 20px;
 }
 
-/* Splash screen styles */
+/* Site styles */
 #splash {
   background: linear-gradient(to bottom right, 
   var(--lyft-purple), var(--lyft-pink));
@@ -128,7 +138,6 @@ img {
   max-width: 250px;
 }
 
-/* Home styles */
 #home {
   background-image: url('../assets/images/home-bg.jpg');
   background-position: 65% 50%;
@@ -150,6 +159,10 @@ img {
 
 #selected-country img {
   width: 25px;
+}
+
+#verification {
+  width: 100px;
 }
 
 @media(min-width: 768px) {

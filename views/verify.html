@@ -27,18 +27,19 @@
 
   <main>
     <section class="container">
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="form-group center-block">
-            <p class="form-control-static">LAB - </p>
-            <input type="tel" class="form-control" id="phoneNumber" placeholder="Insert phone number" value="51">
-          </div>
-        </div>  
-      </div>
-      <p class="text-center mt-20">Enter your 3 digit code</p>
+      <form class="form-inline">
+        <div class="form-group">
+          <label for="verification">LAB - </label>
+          <input type="text" class="form-control text-center" id="verification" placeholder="Insert code" maxlength="3">
+        </div>
+        <p class="text-center mt-20">Enter your 3 digit code</p>
+        <div class="form-group">
+          <button id="resend" type="button" class="btn btn-default">Resend code</button>
+        </div>
+      </form>  
       <div class="row relative">
         <div class="col-xs-8 col-xs-offset-2">
-          <button id="finish-signup" type="button" class="btn btn-lyft text-uppercase center-block" data-target="verify" disabled>next</button>
+          <button id="finish-verification" type="button" class="btn btn-lyft text-uppercase center-block" data-target="verify" disabled>next</button>
         </div>
       </div>
     </section>
