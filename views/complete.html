@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="../vendors/bootstrap/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link rel="stylesheet" href="../css/main.css">
-  <title>Lyft</title>
+  <title>Lyft - Complete registration</title>
 </head>
 
 <body>
@@ -17,37 +17,41 @@
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
-          <button id="back" type="button" class="btn btn-back" data-target="signup">
+          <button id="back" type="button" class="btn btn-back" data-target="verify">
             <span class="glyphicon glyphicon-chevron-left"></span>
           </button>
-          <a class="navbar-brand text-center" href="#">Verify phone number</a>
+          <a class="navbar-brand text-center" href="#">Complete registration</a>
           <p class="navbar-text text-center">Join now for free ride credit</p>
         </div>
     </nav>
   </header>
 
   <main>
+    <!-- Formulario de datos -->
     <section class="container">
-      <!-- Input para colocar codigo -->
       <div class="row">
-        <div class="form-group col-xs-6 col-xs-offset-3">
-          <label for="verification">LAB - </label>
-          <input type="text" class="form-control text-center" id="verification" placeholder="Insert code" maxlength="3">
+        <div class="form-group col-xs-6">
+          <label class="sr-only" for="firstName">First name</label>
+          <input type="text" class="form-control" placeholder="First name" id="firstName">
         </div>
+        <div class="form-group col-xs-6">
+          <label class="sr-only" for="lastName">Last name</label>
+          <input type="text" class="form-control" placeholder="Last name" id="lastName">
+        </div> 
+        <div class="form-group col-xs-12">
+          <label class="sr-only" for="email">Email</label>
+          <input type="text" class="form-control" placeholder="Email" id="email">
+        </div> 
       </div>
-      <div class="row">
-        <p class="text-center mt-20">Enter your 3 digit code</p>
-      </div>
-      <!-- Boton para volver a generar codigo -->
-      <div class="row">
-        <div class="form-group">
-          <button id="resend" type="button" class="btn btn-default">Resend code</button>
-        </div>
+      <!-- Checkbox para completar el formulario -->
+      <div class="checkbox text-center">
+        <label><input type="checkbox" id="check-terms" disabled>
+          I agree to Lyft's <a href="#">Terms of Service</a></label>
       </div>
       <!-- Boton next -->
       <div class="row">
         <div class="col-xs-8 col-xs-offset-2">
-          <button id="finish-verification" type="button" class="btn btn-lyft text-uppercase center-block" data-target="complete" disabled>next</button>
+          <button id="complete" type="button" class="btn btn-lyft text-uppercase center-block" data-target="verify" disabled>next</button>
         </div>
       </div>
     </section>

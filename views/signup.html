@@ -8,10 +8,11 @@
   <link rel="stylesheet" href="../vendors/bootstrap/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link rel="stylesheet" href="../css/main.css">
-  <title>Lyft</title>
+  <title>Lyft - Sign up</title>
 </head>
 
 <body>
+  <!-- Encabezado -->
   <header class="container">
     <nav class="navbar navbar-default">
       <div class="container-fluid">
@@ -29,6 +30,7 @@
     <section class="container">
       <div class="row">
         <div class="col-xs-12">
+          <!-- Button group para seleccionar pais -->
           <div class="input-group">
             <div class="input-group-btn">
               <button id="selected-country" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -42,12 +44,14 @@
                 <li><a href="#" id="eeuu" data-prefix="01"><img src="../assets/images/flag-eeuu.png" alt="Country flag"></a></li>
               </ul>
             </div>
+            <!-- Input para colocar telefono -->
             <input type="tel" class="form-control" id="phoneNumber" placeholder="Insert phone number" value="51" maxlength="10">
           </div>
         </div>  
       </div>
       <p class="text-center mt-20">We'll send a text to verify your phone</p>
-      <div class="row relative">
+      <!-- Boton next -->
+      <div class="row">
         <div class="col-xs-8 col-xs-offset-2">
           <button id="finish-signup" type="button" class="btn btn-lyft text-uppercase center-block" data-target="verify" disabled>next</button>
         </div>

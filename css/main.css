@@ -100,15 +100,8 @@ img {
   margin-left: 5px;
   border-radius: 0;
   display: inline-block;
-  width: auto;
   vertical-align: middle;
 }
-
-/* .form-inline .form-control {
-  display: inline-block;
-  width: auto;
-  vertical-align: middle;
-} */
 
 /* Helpers */
 .screen-100vh{

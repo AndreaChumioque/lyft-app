@@ -1,11 +1,13 @@
 $(document).ready(function() {
   fadeSplash();
-  $('#signup, #login, #finish-signup, #back').click(goTo);
+  $('#signup, #login, #finish-signup, #back, #finish-verification').click(goTo);
   $('#finish-signup, #resend').click(generateCode);
   $('#countries a').click(changeFlag);
   $('#phoneNumber').keyup(validateSignup);
   $('#verification').keyup(verifyCode);
-
+  $('#firstName, #lastName, #email').keyup(enableCheck);
+  validateComplete();
+  
   function fadeSplash() {
     if (window.location.href === 'https://andrea-isabel.github.io/lyft-app/') {
       setTimeout(function() {
@@ -47,6 +49,22 @@ $(document).ready(function() {
       $('#finish-verification').prop('disabled', false);
     } else {
       $('#finish-verification').prop('disabled', true);
+    }
+  }
+
+  function enableCheck() {
+    if ($('#firstName').val() && $('#lastName').val() && $('#email').val()) {
+      $('#check-terms').prop('disabled', false);
+    } else {
+      $('#check-terms').prop('disabled', true);
+    }
+  }
+
+  function validateComplete() {
+    if (!($('#check-terms').is(':disabled'))) {
+      $('#complete').prop('disabled', false);
+    } else {
+      $('#complete').prop('disabled', true);
     }
   }
 });
